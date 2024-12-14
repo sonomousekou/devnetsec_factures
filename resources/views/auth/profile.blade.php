@@ -265,7 +265,7 @@
             <div class="dropdown-divider"></div>
             <ul class="list-unstyled">
               <li>
-                <a class="dropdown-item" href="https://geeksui.codescandy.com/geeks/index.html">
+                <a class="dropdown-item" href="{{ route('logout') }}">
                   <i class="fe fe-power me-2"></i>
                   Sign Out
                 </a>
@@ -894,7 +894,7 @@
                     </div>
                     <div class="lh-1">
                       <h2 class="mb-0">
-                        Stella Flores
+                        {{ Auth::user()->name ?? 'username' }}
                         <a href="#" data-bs-toggle="tooltip" data-placement="top" title="Beginner">
                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="3" y="8" width="2" height="6" rx="1" fill="#754FFE"></rect>
@@ -903,7 +903,7 @@
                           </svg>
                         </a>
                       </h2>
-                      <p class="mb-0 d-block">@stellaflores</p>
+                      <p class="mb-0 d-block">{{ Auth::user()->email ?? '' }}</p>
                     </div>
                   </div>
                   <div>
@@ -1026,7 +1026,7 @@
                       </li>
                       <!-- Nav item -->
                       <li class="nav-item">
-                        <a class="nav-link" href="https://geeksui.codescandy.com/geeks/index.html">
+                        <a class="nav-link" href="{{ route('logout') }}">
                           <i class="fe fe-power nav-icon"></i>
                           Sign Out
                         </a>
